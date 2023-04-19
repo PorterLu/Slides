@@ -1,6 +1,13 @@
+#!/bin/python3
 import os
+import sys
 
 slides = "slides.html"
+
+target = sys.argv[1]
+
+os.system("pandoc "+target+".md -t revealjs -s -o"+target+".html -V theme=simple")
+#print(sys.argv)
 
 with open(slides, 'r') as f:
   lines = []
