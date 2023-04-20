@@ -6,7 +6,7 @@ slides = "slides.html"
 
 target = sys.argv[1]
 
-os.system("pandoc "+target+".md -t revealjs -s -o"+target+".html -V theme=simple")
+os.system("pandoc "+target+".md -t revealjs -s -o"+target+".html -V theme=simple --slide-level=2")
 #print(sys.argv)
 
 with open(slides, 'r') as f:
@@ -17,3 +17,4 @@ with open(slides, 'r') as f:
 
   with open(slides, 'w+') as f:
     f.writelines(lines)
+
