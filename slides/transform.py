@@ -2,9 +2,10 @@
 import os
 import sys
 
-slides = "slides.html"
 
 target = sys.argv[1]
+
+slides = target+".html"
 
 os.system("pandoc "+target+".md -t revealjs -s -o"+target+".html -V theme=simple --slide-level=2")
 #print(sys.argv)
